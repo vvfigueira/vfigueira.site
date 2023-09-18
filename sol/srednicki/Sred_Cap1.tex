@@ -1,0 +1,68 @@
+\documentclass[twoside]{amsart}
+
+\usepackage[brazilian]{babel}
+\usepackage{csquotes}
+\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{graphics}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{slashed}
+\usepackage[lmargin=0.5cm,rmargin=0.5cm, tmargin =1cm,bmargin =1cm]{geometry}
+
+\AtBeginDocument{\renewcommand*{\hbar}{{\mkern-1mu\mathchar'26\mkern-8mu\textnormal{h}}}}
+\AtBeginDocument{\newcommand{\e}{\textnormal{e}}}
+\AtBeginDocument{\newcommand{\im}{\textnormal{i}}}
+\AtBeginDocument{\newcommand{\luz}{\textnormal{c}}}
+\AtBeginDocument{\newcommand{\grav}{\textnormal{G}}}
+\AtBeginDocument{\newcommand{\kb}{{\textnormal{k}_{\textnormal{B}}}}}
+\newcommand{\Dd}[1]{\mathcal D #1}
+\newcommand{\Det}[1]{\textup{Det} #1}
+
+\numberwithin{equation}{section}
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{defi}{Definição}[section]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{hip}{Hipótese}[subsection]
+
+\pagestyle{plain}
+
+\AddToHook{cmd/section/before}{\clearpage}
+
+\addbibresource{ref.bib}
+
+\title{
+Srednicki Capítulo 1
+}
+\author{
+  Vicente V. Figueira
+       }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{refsection}
+\section{Exercício 1}
+
+\begin{align*}
+    H_{ab}H_{bc}&=\qty(\luz P_j\alpha^j_{ab}+m\luz^2\beta_{ab})\qty(\luz P_k\alpha^k_{bc}+m\luz^2\beta_{bc})\\
+    &=\luz^2P_j\alpha^j_{ab}P_k\alpha^k_{bc}+m\luz^3P_j\alpha^j_{ab}\beta_{bc}+m\luz^3 P_k\beta_{ab}\alpha^k_{bc}+m^2\luz^4\beta_{ab}\beta_{bc}
+\end{align*}
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
