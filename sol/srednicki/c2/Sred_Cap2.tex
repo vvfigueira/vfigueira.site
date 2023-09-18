@@ -2,7 +2,6 @@
 
 \usepackage[brazilian]{babel}
 \usepackage{csquotes}
-\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bbm}
@@ -22,6 +21,7 @@
 \AtBeginDocument{\newcommand{\kb}{{\textnormal{k}_{\textnormal{B}}}}}
 \newcommand{\Dd}[1]{\mathcal D #1}
 \newcommand{\Det}[1]{\textup{Det} #1}
+\newcommand{\cqd}{\hfill$\blacksquare$}
 
 \numberwithin{equation}{section}
 
@@ -34,10 +34,8 @@
 
 \AddToHook{cmd/section/before}{\clearpage}
 
-\addbibresource{ref.bib}
-
 \title{
-Srednicki Capítulo 1
+Srednicki Capítulo 2
 }
 \author{
   Vicente V. Figueira
@@ -52,17 +50,20 @@ Srednicki Capítulo 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
 \section{Exercício 1}
 
-\begin{align*}
-    H_{ab}H_{bc}&=\qty(\luz P_j\alpha^j_{ab}+m\luz^2\beta_{ab})\qty(\luz P_k\alpha^k_{bc}+m\luz^2\beta_{bc})\\
-    &=\luz^2P_j\alpha^j_{ab}P_k\alpha^k_{bc}+m\luz^3P_j\alpha^j_{ab}\beta_{bc}+m\luz^3 P_k\beta_{ab}\alpha^k_{bc}+m^2\luz^4\beta_{ab}\beta_{bc}
-\end{align*}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Exercício 2}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Exercício 3}
+
+
 
 \end{document}
