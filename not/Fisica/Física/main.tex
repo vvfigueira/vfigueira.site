@@ -1,0 +1,68 @@
+\documentclass[twoside]{amsart}
+
+\oddsidemargin-0.80cm
+\evensidemargin-0.10cm
+\topmargin-1.6cm     %I recommend adding these three lines to increase the 
+\textwidth17.55cm   %amount of usable space on the page (and save trees)
+\textheight23.85cm  
+
+\usepackage[brazilian]{babel}
+\usepackage{csquotes}
+\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{graphics}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{physics}
+\usepackage{enumitem}
+
+\numberwithin{equation}{section}
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{defi}{Definição}[section]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{hip}{Hipótese}[subsection]
+
+\pagestyle{plain}
+
+\AddToHook{cmd/section/before}{\clearpage}
+
+\addbibresource{ref.bib}
+
+\title{
+Notas de Mecânica Relativística
+}
+\author{
+  Vicente V. Figueira
+       }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{refsection}
+\section{Introdução}
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{refsection}
+\section{Mecânica Relativística}
+
+\subsection{Hipóteses da Teoria Relativística}
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

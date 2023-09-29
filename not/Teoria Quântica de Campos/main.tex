@@ -1,0 +1,90 @@
+\documentclass[twoside]{amsart}
+
+\oddsidemargin-0.80cm
+\evensidemargin-0.10cm
+\topmargin-1.6cm     %I recommend adding these three lines to increase the 
+\textwidth17.55cm   %amount of usable space on the page (and save trees)
+\textheight23.85cm  
+
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{graphics}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{physics}
+
+\numberwithin{equation}{section}
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{defi}{Definição}[section]
+\newtheorem{lem}{Lema}[section]
+
+\pagestyle{plain}
+
+
+\title{
+Notas de Teoria Quântica de Campos
+}
+\author{
+  Vicente V. Figueira
+       }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+
+\newpage
+
+\section{Transformações de Lorentz}
+
+A grande motivação por trás de iniciar-se uma busca por uma Teoria Quântica de Campos é ao se perceber que 
+a Mecânica Quântica de Schrödinger não é compatível com a Relatividade Restrita. Em busca de conciliar uma 
+teoria que englobe ambas Mecânica Quântica e Relatividade Restrita somos levados naturalmente a definir 
+uma teoria na qual as \emph{funções de onda} são na verdade operadores em um espaço de Hilbert. Naturalmente 
+como queremos englobar a relatividade, temos que primeiramente entender os detalhes das transformações de Lorentz.
+
+\subsection{Transformações de Lorentz}
+
+Uma transformação de Lorentz é uma transformação linear das coordenadas que preserva o produto interno relativístico, 
+isto é, 
+
+\begin{align*}
+    {x'}^{\mu}=\Lambda^{\mu}_{\ \rho}x^\rho+a^\mu
+\end{align*}
+
+A condição de preservar o produto interno relativístico pode ser escrita como,
+
+\begin{align*}
+    g_{\mu\nu}\dd{{x'}^{\mu}}\dd{{x'}^{\nu}}&=g_{\rho\sigma}\dd{x^{\rho}}\dd{x^\sigma}\\
+    g_{\mu\nu}\pdv{{x'}^\mu}{x^\rho}\pdv{{x'}^\nu}{x^\sigma}&=g_{\rho\sigma}\\
+    g_{\mu\nu}\Lambda^{\mu}_{\ \rho}\Lambda^{\nu}_{\ \sigma}&=g_{\rho\sigma}
+\end{align*}
+
+Transformações desse tipo claramente formam um grupo, pois,
+
+\begin{align*}
+    {x''}^\mu&={\bar\Lambda}^\mu_{\ \rho}{x'}^\rho+{\bar a}^\mu\\
+    &={\bar\Lambda}^\mu_{\ \rho}\qty(\Lambda^\rho_{\ \nu}x^\nu+ a^\rho)+{\bar a}^\mu\\
+    &={\bar\Lambda}^\mu_{\rho}\Lambda^\rho_{\ \nu}x^\nu+\qty({\bar\Lambda}^\mu_{\rho}a^\rho+{\bar a}^\mu)
+\end{align*}
+
+Com a lei de transformações então satisfazendo,
+
+\begin{align*}
+    T\qty(\bar\Lambda,\bar a)T\qty(\Lambda, a)&=T\qty(\bar\Lambda\Lambda,\bar\Lambda a+\bar a)
+\end{align*}
+
+Essas transformações atuam nos próprios pontos do espaço-tempo, porém, nos interessa mais como essas transformações 
+afetam os vetores, e operadores, definidos no espaço de Hilbert. Como essas transformações são continuamente deformáveis 
+à identidade $\Lambda=\mathbbm 1$ e $a=0$, segue que podemos encontrar uma representação para a atuação dessas transformações no espaço de Hilbert como um operador unitário 
+
+\end{document}
