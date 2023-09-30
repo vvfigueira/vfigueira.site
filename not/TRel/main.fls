@@ -1,7 +1,7 @@
-PWD /home/vfigueira/Documentos/vfigueira.site/not/Teoria Relativística
+PWD /home/vfigueira/Documentos/vfigueira.site/not/TRel
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/vfigueira/Documentos/vfigueira.site/not/Teoria Relativística/main.tex
+INPUT /home/vfigueira/Documentos/vfigueira.site/not/TRel/main.tex
 OUTPUT main.log
 INPUT /usr/share/texmf-dist/tex/latex/amscls/amsart.cls
 INPUT /usr/share/texmf-dist/tex/latex/amscls/amsart.cls

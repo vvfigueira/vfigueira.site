@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1696067337 "/home/vfigueira/Documentos/vfigueira.site/not/Teoria Relativística/main.tex" "main.pdf" "main" 1696067344 0
-  "/home/vfigueira/Documentos/vfigueira.site/not/Teoria Relativística/main.tex" 1696067327 74650 8e0d71fece60372554b83bd01fd5f576 ""
+["pdflatex"] 1696099646 "/home/vfigueira/Documentos/vfigueira.site/not/TRel/main.tex" "main.pdf" "main" 1696099653 0
+  "/home/vfigueira/Documentos/vfigueira.site/not/TRel/main.tex" 1696099645 75544 8e005dc3818359309f2460cc326befc5 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1689853683 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1689853683 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -119,10 +119,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1695064006 4483110 adb1e1d04498b9576f1f17c4219c5e03 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1695065498 6768742 6ea12621b554e13c4562fed0edec7c83 ""
-  "main.aux" 1696067344 1835 2f4ca661eac78365832c502ecaf2b357 "pdflatex"
-  "main.out" 1696067344 1506 3e742e6aaa822ef1be0f02020e771da3 "pdflatex"
-  "main.tex" 1696067327 74650 8e0d71fece60372554b83bd01fd5f576 ""
-  "main.toc" 1696067344 732 198f55b7ce4b380405336bf3f27a7a2b "pdflatex"
+  "main.aux" 1696099653 1835 2f4ca661eac78365832c502ecaf2b357 "pdflatex"
+  "main.out" 1696099653 1506 3e742e6aaa822ef1be0f02020e771da3 "pdflatex"
+  "main.tex" 1696099645 75544 8e005dc3818359309f2460cc326befc5 ""
+  "main.toc" 1696099653 732 198f55b7ce4b380405336bf3f27a7a2b "pdflatex"
   (generated)
   "main.aux"
   "main.log"

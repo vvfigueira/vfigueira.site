@@ -119,13 +119,33 @@ Para um boost, temos que construir escalares e vetores com $\vb v$ e $\vb x$, a 
     \vb {\bar x}&=c\qty(v)\vb x+d\qty(v)\frac{\vb v\cdot \vb x}{v^2}\vb v+e\qty(v)t\vb v
 \end{align}
 
-A condição $\vb x=\vb v t$ deve implicar $\vb{\bar x}=0$, logo a restrição é,
+A condição $\vb x=\vb v t$ deve implicar $\vb{\bar x}=0$, 
+
+\begin{align}
+    \vb 0&=c\qty(v)\vb v t+d\qty(v)t\frac{\vb v\cdot \vb v}{v^2}\vb v+e\qty(v)t\vb v\\
+    \vb 0&=c\qty(v)\vb v t+d\qty(v)\vb v t+e\qty(v)\vb v t
+\end{align}
+
+logo a restrição é,
 
 \begin{align}
     c\qty(v)+d\qty(v)+e\qty(v)&=0
 \end{align}
 
-A transformação inversa deve valer para $\vb {\bar v}=-\vb v$, o que implica em
+A transformação inversa deve valer para $\vb {\bar v}=-\vb v$, 
+
+\begin{align}
+    &\begin{cases}
+        {t}&=a\qty(v){\bar t}-b\qty(v)\vb v\cdot \vb{\bar x}\\
+    \vb { x}&=c\qty(v)\vb{\bar x}+d\qty(v)\frac{\vb v\cdot \vb{\bar x}}{v^2}\vb v-e\qty(v){\bar t}\vb v
+    \end{cases}\\
+    &\begin{cases}
+        {t}&=a\qty(v)\qty[a\qty(v)t+b\qty(v)\vb v\cdot \vb x]-b\qty(v)\vb v\cdot \qty[c\qty(v)\vb x+\frac{1}{v^2}d\qty(v)\qty(\vb v\cdot \vb x)\vb v+e\qty(v)t\vb v]\\
+    \vb { x}&=c\qty(v)\qty[c\vb x+\frac{1}{v^2}d\qty(v)\qty(\vb v\cdot\vb x)\vb v+e\qty(v)t\vb v]+\frac{1}{v^2}d\qty(v)\qty(\vb v\cdot \qty[c\qty(v)\vb x+\frac{1}{v^2}d\qty(v)\qty(\vb v\cdot \vb x)\vb v+e\qty(v)t\vb v])\vb v-e\qty(v)\qty[a\qty(v)t+b\qty(v)\qty(\vb v\cdot\vb x)]\vb v
+    \end{cases}
+\end{align}
+
+o que implica em
 
 \begin{align}
     c^2&=1\\
