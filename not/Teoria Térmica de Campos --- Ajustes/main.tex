@@ -1,14 +1,8 @@
 \documentclass[twoside]{amsart}
 
-%\oddsidemargin-2.00cm
-%\evensidemargin-2.00cm
-%\topmargin-1.6cm     %I recommend adding these three lines to increase the 
-%\textwidth17.55cm   %amount of usable space on the page (and save trees)
-%\textheight23.85cm  
-
 \usepackage[brazilian]{babel}
 \usepackage{csquotes}
-\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
+%\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bbm}
@@ -18,7 +12,19 @@
 \usepackage{physics}
 \usepackage{enumitem}
 \usepackage{slashed}
+\usepackage{tensor}
 \usepackage[lmargin=0.5cm,rmargin=0.5cm, tmargin =1cm,bmargin =1cm]{geometry}
+
+\AtBeginDocument{\renewcommand*{\hbar}{{\mkern-1mu\mathchar'26\mkern-8mu\textnormal{h}}}}
+\AtBeginDocument{\newcommand{\e}{\textnormal{e}}}
+\AtBeginDocument{\newcommand{\im}{\textnormal{i}}}
+\AtBeginDocument{\newcommand{\luz}{\textnormal{c}}}
+\AtBeginDocument{\newcommand{\grav}{\textnormal{G}}}
+\AtBeginDocument{\newcommand{\kb}{{\textnormal{k}_{\textnormal{B}}}}}
+\newcommand{\Dd}[1]{\mathcal D #1}
+\newcommand{\Det}[1]{\textup{Det} #1}
+\newcommand{\sgn}[1]{\mbox{sgn}\qty(#1)}
+\newcommand{\cqd}{\hfill$\blacksquare$}
 
 \numberwithin{equation}{section}
 
@@ -31,11 +37,7 @@
 
 \AddToHook{cmd/section/before}{\clearpage}
 
-\newcommand{\Dd}[1]{\mathcal D #1}
-\newcommand{\Det}[1]{\textup{Det} #1}
-\newcommand{\imm}{\textup{i}}
-
-\addbibresource{ref.bib}
+%\addbibresource{ref.bib}
 
 \title{
 Notas de Teoria Térmica de Campos
@@ -53,7 +55,7 @@ Notas de Teoria Térmica de Campos
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Introdução}
 
 Vamos primeiramente motivar o tratamento via integrais de caminho, para isto, vamos tomar o resultado conhecido de,
@@ -195,12 +197,12 @@ Finalmente,
     &=\mathcal N\frac{1}{1-e^{-\beta\hbar\omega}}
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Campo Escalar Real}
 
 Vamos agora generalizar o cálculo para um campo escalar real. A motivação é calcular propriedades termodinâmicas de um grande número de partículas descritas por um campo escalar real. A função de partição é,
@@ -489,12 +491,12 @@ Logo, o traço pode ser reescrito como,
     &=\exp\qty{-V\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3}\ln\qty[1-e^{-\beta\omega_{\vb k}}]}
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Campo Escalar Complexo}
 
 Nossa lagrangiana é,
@@ -618,12 +620,12 @@ Podemos então calcular a energia livre de Helmholtz,
     &=\frac1\beta V\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3}\ln\qty[1-e^{-\beta\qty(\omega+\mu)}]+\frac1\beta V\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3}\ln\qty[1-e^{-\beta\qty(\omega-\mu)}]
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Campo Spinorial}
 
 Queremos agora olhar para os campos fermiônicos, dados pela lagrangiana,
@@ -657,47 +659,47 @@ A equação de autovalores é,
     \qty[\gamma^0 \pdv{}{\tau}-i\boldsymbol{\gamma}\cdot \grad+m\mathbbm 1-\mu\gamma^0]\Psi=\lambda\Psi,\ \Psi\qty(-\frac12\beta,\vb x)=-\Psi\qty(\frac12\beta,\vb x)\\
     \sum\limits_{n=-\infty}^{+\infty}\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3\beta}\qty[\gamma^0 \pdv{}{\tau}-i\boldsymbol{\gamma}\cdot \grad+m\mathbbm 1-\mu\gamma^0]e^{i\vb k\cdot\vb x}e^{i\frac{2\pi\tau}{\beta}\qty(n+\frac12)}\psi_n\qty(\vb k)=\sum\limits_{n=-\infty}^{+\infty}\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3\beta}e^{i\vb k\cdot\vb x}e^{i\frac{2\pi\tau}{\beta}\qty(n+\frac12)}\lambda\psi_n\qty(\vb k)\\
     \qty[\gamma^0i\frac{2\pi}{\beta}\qty(n+\frac12)+\boldsymbol\gamma\cdot\vb k+m\mathbbm 1-\gamma^0\mu]\psi_n\qty(\vb k)=\lambda\psi_n\qty(\vb k)\\
-    \qty[\gamma^0\imm\omega_n+\boldsymbol\gamma\cdot\vb k+m\mathbbm 1-\gamma^0\mu]\psi_n\qty(\vb k)&=\lambda\psi_n\qty(\vb k)\\
-    \mqty(m-\lambda+\imm\omega_n-\mu&0&k_z&k_x-ik_y\\0&m-\lambda+\imm\omega_n-\mu&k_x+ik_y&-k_z\\-k_z&-k_x+ik_y&m-\lambda+\mu-\imm\omega_n&0\\-k_x-ik_y&k_z&0&m-\lambda+\mu-\imm\omega_n)\mqty(a_n\qty(\vb k)\\b_n\qty(\vb k)\\c_n\qty(\vb k)\\d_n\qty(\vb k))=0
+    \qty[\gamma^0\im\omega_n+\boldsymbol\gamma\cdot\vb k+m\mathbbm 1-\gamma^0\mu]\psi_n\qty(\vb k)&=\lambda\psi_n\qty(\vb k)\\
+    \mqty(m-\lambda+\im\omega_n-\mu&0&k_z&k_x-ik_y\\0&m-\lambda+\im\omega_n-\mu&k_x+ik_y&-k_z\\-k_z&-k_x+ik_y&m-\lambda+\mu-\im\omega_n&0\\-k_x-ik_y&k_z&0&m-\lambda+\mu-\im\omega_n)\mqty(a_n\qty(\vb k)\\b_n\qty(\vb k)\\c_n\qty(\vb k)\\d_n\qty(\vb k))=0
 \end{align}
 
 Que pode ser escrita como,
 
 \begin{align}
     &\begin{cases}
-        a\qty(m-\lambda+\imm\omega_n-\mu)+k_z c+d\qty(k_x-ik_y)&=0\\
-        b\qty(m-\lambda+\imm\omega_n-\mu)+c\qty(k_x+ik_y)-dk_z&=0\\
-        -ak_z+b\qty(-k_x+ik_y)+c\qty(m-\lambda+\mu-\imm\omega_n)&=0\\
-        -a\qty(k_x+ik_y)+bk_z+d\qty(m-\lambda+\mu-\imm\omega_n)&=0
+        a\qty(m-\lambda+\im\omega_n-\mu)+k_z c+d\qty(k_x-ik_y)&=0\\
+        b\qty(m-\lambda+\im\omega_n-\mu)+c\qty(k_x+ik_y)-dk_z&=0\\
+        -ak_z+b\qty(-k_x+ik_y)+c\qty(m-\lambda+\mu-\im\omega_n)&=0\\
+        -a\qty(k_x+ik_y)+bk_z+d\qty(m-\lambda+\mu-\im\omega_n)&=0
     \end{cases}\\
     &\begin{cases}
-        a&=\frac{-k_zc-d\qty(k_x-ik_y)}{\imm\omega_n-\mu+m-\lambda}\\
-        b&=\frac{-c\qty(k_x+ik_y)+dk_z}{\imm\omega_n-\mu+m-\lambda}
+        a&=\frac{-k_zc-d\qty(k_x-ik_y)}{\im\omega_n-\mu+m-\lambda}\\
+        b&=\frac{-c\qty(k_x+ik_y)+dk_z}{\im\omega_n-\mu+m-\lambda}
     \end{cases}\\
     &\begin{cases}
-        \frac{k_z^2c+k_zd\qty(k_x-ik_y)}{\imm\omega_n-\mu+m-\lambda}+\qty(-k_x+ik_y)\frac{dk_z-c\qty(k_x+ik_y)}{\imm\omega_n-\mu+m-\lambda}+c\qty(\mu-\imm\omega_n+m-\lambda)&=0
+        \frac{k_z^2c+k_zd\qty(k_x-ik_y)}{\im\omega_n-\mu+m-\lambda}+\qty(-k_x+ik_y)\frac{dk_z-c\qty(k_x+ik_y)}{\im\omega_n-\mu+m-\lambda}+c\qty(\mu-\im\omega_n+m-\lambda)&=0
     \end{cases}\\
     &\begin{cases}
-        c\vb k^2&=c\qty(\qty(\imm\omega_n-\mu)^2-\qty(m-\lambda)^2)\\
-        d\vb k^2&=d\qty(\qty(\imm\omega_n-\mu)^2-\qty(m-\lambda)^2)
+        c\vb k^2&=c\qty(\qty(\im\omega_n-\mu)^2-\qty(m-\lambda)^2)\\
+        d\vb k^2&=d\qty(\qty(\im\omega_n-\mu)^2-\qty(m-\lambda)^2)
     \end{cases}
 \end{align}
 
 Portanto temos que,
 
 \begin{align}
-    a&=\frac{-k_zc-d\qty(k_x-ik_y)}{\imm\omega_n-\mu+m-\lambda}\\
-    b&=\frac{-c\qty(k_x+ik_y)+dk_z}{\imm\omega_n-\mu+m-\lambda}\\
-    \lambda_n^\pm\qty(\vb k)&=m\pm\sqrt{\qty(\imm\omega_n-\mu)^2-\vb k^2}
+    a&=\frac{-k_zc-d\qty(k_x-ik_y)}{\im\omega_n-\mu+m-\lambda}\\
+    b&=\frac{-c\qty(k_x+ik_y)+dk_z}{\im\omega_n-\mu+m-\lambda}\\
+    \lambda_n^\pm\qty(\vb k)&=m\pm\sqrt{\qty(\im\omega_n-\mu)^2-\vb k^2}
 \end{align}
 
 Assim o determinante que queremos calcular é,
 
 \begin{align}
     &\Det\qty[\gamma^0 \pdv{}{\tau}-i\boldsymbol{\gamma}\cdot \grad+m\mathbbm 1-\mu\gamma^0]\\
-    &=\prod\limits_{\vb k\in\mathbb R^3}\prod\limits_{n\in\mathbb Z}\qty(m+\sqrt{\qty(\imm\omega_n-\mu)^2-\vb k^2})\qty(m-\sqrt{\qty(\imm\omega_n-\mu)^2-\vb k^2})\\
-    &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n\in\mathbb Z}\qty(\omega_{\vb k}^2-\qty(\imm\omega_n-\mu)^2)]\\
-    &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n\in\mathbb Z}\qty(\omega_{\vb k}-\imm\omega_n+\mu)\qty(\omega_{\vb k}+\imm\omega_n-\mu)]\\
+    &=\prod\limits_{\vb k\in\mathbb R^3}\prod\limits_{n\in\mathbb Z}\qty(m+\sqrt{\qty(\im\omega_n-\mu)^2-\vb k^2})\qty(m-\sqrt{\qty(\im\omega_n-\mu)^2-\vb k^2})\\
+    &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n\in\mathbb Z}\qty(\omega_{\vb k}^2-\qty(\im\omega_n-\mu)^2)]\\
+    &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n\in\mathbb Z}\qty(\omega_{\vb k}-\im\omega_n+\mu)\qty(\omega_{\vb k}+\im\omega_n-\mu)]\\
     &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n=0}^{\infty}\qty(\omega_n^2+\qty(\omega_{\vb k}+\mu)^2)\qty(\omega_n^2+\qty(\omega_{\vb k}-\mu)^2)]\\
     &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n=0}^\infty\qty(\frac{4\pi^2}{\beta^2}\qty(n+\frac12)^2)^2\prod\limits_{p=0}^{\infty}\qty(1+\frac{\beta^2\qty(\omega_{\vb k}+\mu)^2}{4\pi^2\qty(p+\frac12)^2})\prod\limits_{q=0}^{\infty}\qty(1+\frac{\beta^2\qty(\omega_{\vb k}-\mu)^2}{4\pi^2\qty(q+\frac12)^2})]\\
     &=\prod\limits_{\vb k\in\mathbb R^3}\qty[\prod\limits_{n=0}^\infty\qty(\frac{4\pi^2}{\beta^2}\qty(n+\frac12)^2)^2\cosh\qty(\frac12\beta\qty(\omega_{\vb k}+\mu))\cosh\qty(\frac12\beta\qty(\omega_{\vb k}-\mu))]\\
@@ -720,12 +722,12 @@ Isto é,
     F&=-\frac V\beta\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3}\ln\qty[1+e^{-\beta\qty(\omega_{\vb k}+\mu)}]-\frac V\beta\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3}\ln\qty[1+e^{-\beta\qty(\omega_{\vb k}-\mu)}]
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Campo de Calibre}
 
 O objetivo é refazer os cálculos anteriores para a teoria descrita pela Lagrangiana, 
@@ -783,14 +785,14 @@ Segue naturalmente que,
     &\int\Dd{\eta}\Dd{\bar\eta}\exp\qty{-\int\limits_{-\frac12\beta}^{\frac12\beta}\dd{\tau}\dd[3]{\vb x}\qty[\bar\eta\partial_\mu \partial_\mu \eta]}=\exp\qty{2V\int\frac{\dd[3]{\vb k}}{\qty(2\pi)^3}\ln\qty[\sinh\qty(\frac12\beta\norm{\vb k})]}
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Regularização Zeta}
 
 Suponhamos que desejamos calcular o seguinte produtório,
@@ -882,17 +884,17 @@ Sabendo de, $\zeta\qty(0,\frac12)=0$ e $\zeta'\qty(0,\frac12)=-\frac12\ln2$, tem
     \prod\limits_{n=1}^{\infty}\frac{4\pi^2}{a^2}\qty(n-\frac12)^2&=2
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Determinantes}
 
 
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 \end{document}

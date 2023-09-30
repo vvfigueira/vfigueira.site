@@ -2,6 +2,7 @@
 
 \usepackage[brazilian]{babel}
 \usepackage{csquotes}
+%\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bbm}
@@ -22,6 +23,7 @@
 \AtBeginDocument{\newcommand{\kb}{{\textnormal{k}_{\textnormal{B}}}}}
 \newcommand{\Dd}[1]{\mathcal D #1}
 \newcommand{\Det}[1]{\textup{Det} #1}
+\newcommand{\sgn}[1]{\mbox{sgn}\qty(#1)}
 \newcommand{\cqd}{\hfill$\blacksquare$}
 
 \numberwithin{equation}{section}
@@ -34,6 +36,8 @@
 \pagestyle{plain}
 
 \AddToHook{cmd/section/before}{\clearpage}
+
+%\addbibresource{ref.bib}
 
 \title{
 Srednicki Capítulo 3

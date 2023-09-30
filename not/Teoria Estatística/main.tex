@@ -1,10 +1,4 @@
-\documentclass[twoside,reqno]{amsart}
-
-\oddsidemargin-0.80cm
-\evensidemargin-0.10cm
-\topmargin-1.6cm
-\textwidth17.55cm
-\textheight23.85cm  
+\documentclass[twoside]{amsart}
 
 \usepackage[brazilian]{babel}
 \usepackage{csquotes}
@@ -17,10 +11,34 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{physics}
 \usepackage{enumitem}
+\usepackage{slashed}
+\usepackage{tensor}
+\usepackage[lmargin=0.5cm,rmargin=0.5cm, tmargin =1cm,bmargin =1cm]{geometry}
 
+\AtBeginDocument{\renewcommand*{\hbar}{{\mkern-1mu\mathchar'26\mkern-8mu\textnormal{h}}}}
+\AtBeginDocument{\newcommand{\e}{\textnormal{e}}}
+\AtBeginDocument{\newcommand{\im}{\textnormal{i}}}
+\AtBeginDocument{\newcommand{\luz}{\textnormal{c}}}
+\AtBeginDocument{\newcommand{\grav}{\textnormal{G}}}
+\AtBeginDocument{\newcommand{\kb}{{\textnormal{k}_{\textnormal{B}}}}}
+\newcommand{\Dd}[1]{\mathcal D #1}
+\newcommand{\Det}[1]{\textup{Det} #1}
+\newcommand{\sgn}[1]{\mbox{sgn}\qty(#1)}
+\newcommand{\cqd}{\hfill$\blacksquare$}
 \newcommand{\dbar}{\mbox{\dj}}
 
 \numberwithin{equation}{section}
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{defi}{Definição}[section]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{hip}{Hipótese}[subsection]
+
+\pagestyle{plain}
+
+\AddToHook{cmd/section/before}{\clearpage}
+
+\addbibresource{ref.bib}
 
 \newtheorem{teorema}{Teorema}[section]
 \newtheorem{definicao}{Definição}[section]
@@ -34,12 +52,6 @@
   {\renewcommand{\thistheoremname}{#1}
    \begin{genericthm}}
   {\end{genericthm}}
-
-\pagestyle{plain}
-
-\AddToHook{cmd/section/before}{\clearpage}
-
-\addbibresource{ref.bib}
 
 \title{
 Notas de Mecânica Estatística
@@ -220,7 +232,7 @@ Suponha também que sabemos uma função de estado $F(\Theta,x,J)=0$, que implic
 
 \begin{align}
     \dbar Q&=\dd{U}-\dbar W\\
-    \dbar Q&=\pdv{U}{\Theta}\dd\Theta+\pdv{U}{x}\dd x+\pdv{U}{J}\dd J-J\dd x\\
+    \dbar Q&=\pdv{U}{\Theta}\dd\Theta+\pdv{U}{x}\dd x+\pdv{U}{J}\dd J-J\dd x
 \end{align}
 
 Para transformar $\dbar Q$ em um diferencial exato multiplicamos por $\phi=\phi\qty(\Theta,x,J)$
@@ -268,29 +280,29 @@ de $\dbar Q$ sobre transformações de sistemas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Termodinâmica Moderna}
 
 \subsection{Redução de Princípios}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Teoria de Probabilidade e Informação}
 
 \subsection{Noções Básicas de Probabilidade}
 
 \subsection{Problema da Informação Limitada}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Mecânica Estatística Clássica}
 
 \subsection{O que é Mecânica Estatística?}
@@ -356,12 +368,12 @@ observáveis físicos.
 
 \subsubsection{Hipótese Entrópica}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Mecânica Estatística Quântica}
 
 \subsection{Mudanças do Clássico para Quântico}
@@ -372,12 +384,12 @@ observáveis físicos.
 
 \subsubsection{Hipótese Entrópica}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Mecânica Estatística Relativística}
 
 \subsection{Mudanças do Clássico para Relativístico}
@@ -388,8 +400,8 @@ observáveis físicos.
 
 \subsubsection{Hipótese Entrópica}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

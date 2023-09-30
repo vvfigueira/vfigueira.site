@@ -1,14 +1,8 @@
 \documentclass[twoside]{amsart}
 
-\oddsidemargin-0.80cm
-\evensidemargin-0.10cm
-\topmargin-1.6cm     %I recommend adding these three lines to increase the 
-\textwidth17.55cm   %amount of usable space on the page (and save trees)
-\textheight23.85cm  
-
 \usepackage[brazilian]{babel}
 \usepackage{csquotes}
-\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
+%\usepackage[sorting=none, style=verbose-inote, backend=biber]{biblatex}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bbm}
@@ -17,7 +11,20 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{physics}
 \usepackage{enumitem}
+\usepackage{slashed}
 \usepackage{tensor}
+\usepackage[lmargin=0.5cm,rmargin=0.5cm, tmargin =1cm,bmargin =1cm]{geometry}
+
+\AtBeginDocument{\renewcommand*{\hbar}{{\mkern-1mu\mathchar'26\mkern-8mu\textnormal{h}}}}
+\AtBeginDocument{\newcommand{\e}{\textnormal{e}}}
+\AtBeginDocument{\newcommand{\im}{\textnormal{i}}}
+\AtBeginDocument{\newcommand{\luz}{\textnormal{c}}}
+\AtBeginDocument{\newcommand{\grav}{\textnormal{G}}}
+\AtBeginDocument{\newcommand{\kb}{{\textnormal{k}_{\textnormal{B}}}}}
+\newcommand{\Dd}[1]{\mathcal D #1}
+\newcommand{\Det}[1]{\textup{Det} #1}
+\newcommand{\sgn}[1]{\mbox{sgn}\qty(#1)}
+\newcommand{\cqd}{\hfill$\blacksquare$}
 
 \numberwithin{equation}{section}
 
@@ -30,7 +37,7 @@
 
 \AddToHook{cmd/section/before}{\clearpage}
 
-\addbibresource{ref.bib}
+%\addbibresource{ref.bib}
 
 \title{
 Notas de Mecânica Relativística
@@ -40,8 +47,6 @@ Notas de Mecânica Relativística
        }
 \date{\today}
 
-\newcommand{\sgn}[1]{\mbox{sgn}\qty(#1)}
-
 \begin{document}
 
 \maketitle
@@ -50,15 +55,15 @@ Notas de Mecânica Relativística
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Introdução}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Mecânica Relativística}
 
 \subsection{Hipóteses da Teoria Relativística}
@@ -695,12 +700,12 @@ Note que,
 
 Obtemos então uma maneira genérica de tratar a quadrivelocidade.
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%%\printbibliography[heading=subbibliography]
+%%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Formalismo Lagrangiano}
 
 Gostaríamos agora de expressar nossas equações de movimento com notação não vetorial, para isto precisamos recorrer ao cálculo variacional, gostaríamos de obter a expressão de movimento de uma partícula livre, $$\dv{p}{s}=0$$ como resultado da extremização de alguma quantidade que seja invariante entre observadores inerciais (motivação?), caso o movimento da partícula se dê entre $t_1$ e $t_2$, a expressão que procuramos deve ser da forma, $$S[x,\cdots]=\int\limits_{t_1}^{t_2}\dd{t'}L\qty[x\qty(t'),\cdots]$$ O processo do cálculo variacional,
@@ -999,12 +1004,12 @@ Supomos que $\vb a =0$, e que o sinal da interação entre as partículas viaja 
     \end{cases}
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Formalismo Hamiltoniano}
 
 Vamos fazer uma transformação de variáveis para expressar as equações de movimento na forma dita Hamiltoniana, para isso vamos definir o \emph{momento}, como sendo, utilizando a notação, ${\dot x}^\mu=\dv{x^\mu}{\lambda}$,
@@ -1053,20 +1058,20 @@ Vamos aplicar as equações do movimento,
     \pdv{H}{p_\mu}&=\frac{1}{\alpha}\qty(p^\mu+\frac1c A^\mu)=\dot{x}^\mu
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Formalismo de Hamilton-Jacobi}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{refsection}
+%\begin{refsection}
 \section{Teoria Clássica de Campos}
 
 \subsection{Teorema de Noether}
@@ -1121,7 +1126,7 @@ Outra simetria é a de transformação de Lorentz, $$x\rightarrow \Lambda x=x^\m
 
 \begin{align}
     \mathcal L\qty(x)\rightarrow\mathcal L'\qty(x+\delta\omega x)\\
-    \mathcal L'\qty(x+\delta\omega x)&=\mathcal L\qty(x)+\partial_\mu\mathcal L\qty(x)\delta\omega^\mu_{\ \nu}x^\nu\\
+    \mathcal L'\qty(x+\delta\omega x)&=\mathcal L\qty(x)+\partial_\mu\mathcal L\qty(x)\delta\omega^\mu_{\ \nu}x^\nu
 \end{align}
 
 \begin{align}
@@ -1237,8 +1242,8 @@ Igualando as variações, concluímos que
     \partial_\sigma\mathcal J^{\sigma}_{\ \mu\nu}&=0
 \end{align}
 
-\printbibliography[heading=subbibliography]
-\end{refsection}
+%\printbibliography[heading=subbibliography]
+%\end{refsection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%o  
 
